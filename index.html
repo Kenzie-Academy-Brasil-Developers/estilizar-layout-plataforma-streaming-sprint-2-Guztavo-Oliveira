@@ -9,7 +9,7 @@
 	<title>Kenzieflix</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="./css/style.css" />
 
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" /> 
@@ -17,69 +17,72 @@
 <body>
 	
 	<!-- CABEÇALHO -->
-	<header class="topo">
-		<figure>
-			<img src="img/logo.png" alt="Kenzieflix">
-			<figcaption>Kenzieflix</figcaption>
+	<header class="headerTop">
+		<figure >
+			<img src="img/logo.png" alt="Kenzieflix" class="headerTop__logo"> 
+			<figcaption class="hidden">Kenzieflix</figcaption>
 		</figure>
 	</header>
 
 	<!-- PÁGINA INICIAL -->
-	<div class="pg-home">
+	<div class="content">
 		
 		<section>
 
-			<header>
-				<h2>Quem está assistindo?</h2>
+			<header class="content__header">
+				<h2 class="content__title">Quem está assistindo?</h2>
 			</header>
 
 			<!-- LISTA DE USUÁRIOS -->
-			<ul>
+			<ul class="userList" >
 				
 				<!-- USUÁRIO 1 -->
-				<li>
-					<figure>
-						<img src="img/avatar.png" alt="Gabriel">
-						<figcaption>Gabriel</figcaption>
+				<li class="userList__usr1">
+					<figure class="teste">
+						<img src="img/avatar.png" alt="Gabriel" class="userList__avatar1 userList__avatar--hover">
+						<figcaption class="hidden">Gabriel</figcaption>
 					</figure>
 
-					<h3>Gabriel</h3>
+					<h3 class="userName">Gabriel</h3>
 				</li>
 				
 				<!-- USUÁRIO 2 -->
-				<li>
+				<li class="userList__usr2">
 					<figure>
-						<img src="img/avatar1.png" alt="Maria">
-						<figcaption>Maria</figcaption>
+						<img src="img/avatar1.png" alt="Maria" class="userList__avatar2 userList__avatar--hover">
+						<figcaption class="hidden">Maria</figcaption>
 					</figure>
 
-					<h3>Maria</h3>
+					<h3 class="userName">Maria</h3>
 				</li>
 				
 				<!-- USUÁRIO 3 -->
-				<li>
+				<li class="userList__usr3">
 					<figure>
-						<img src="img/avatar2.png" alt="Renato">
-						<figcaption>Renato</figcaption>
+						<img src="img/avatar2.png" alt="Renato" class="userList__avatar3 userList__avatar--hover">
+						<figcaption class="hidden">Renato</figcaption>
 					</figure>
 
-					<h3>Renato</h3>
+					<h3 class="userName">Renato</h3>
 				</li>
 
 				<!-- ADICIONAR PERFIL-->
 				<li class="addPerfil">
 					<figure>
-						<img src="img/plus-sign.png" alt="Adicionar perfil">
-						<figcaption>Adicionar perfil</figcaption>
+						<img src="img/plus-sign.png" alt="Adicionar perfil" class="addPerfil__img">
+						<!-- <figcaption clas="hidden">Adicionar perfil</figcaption> -->
 					</figure>
 
-					<h3>Adicionar perfil</h3>
+					<h3 class="userName">Adicionar perfil</h3>
 				</li>
+				
 
 			</ul>
 
-			<footer>
-				<button>Gerenciar Perfis</button>
+			
+
+			<footer class="footer">
+				<button class="footer__btnProfile">Gerenciar Perfis</button>
 			</footer>
 
 		</section>

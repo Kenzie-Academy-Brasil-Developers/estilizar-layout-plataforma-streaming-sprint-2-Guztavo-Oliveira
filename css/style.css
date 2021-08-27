@@ -15,17 +15,80 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
-:root{
-  
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --background-color-standard: #00002e;
 }
 
 /*BODY*/
 	body{
-
+		background-color: var(--background-color-standard);
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		color: #fff;
+		
 	}
 
 /*TOPO*/
-	header.topo{
+
+	.headerTop {
+		margin-bottom: 60px;
+	}
+
+	.headerTop figure{
+		display: flex;
+		justify-content: center;
+	}
+
+	.headerTop__logo {
 		
 	}
 
@@ -33,6 +96,115 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 	
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
+	.content {
+				
+		height: 500px;		
+		margin: 0 auto;
 		
 	}
+
+	.content__header {
+
+	}
+
+	.content__title {
+		color: #fff;
+		text-align: center;
+		font-size: 40px;
+		padding: 12px 0px;
+		font-weight: bold;
+	}
+
+	.userList  {
+		display: flex;
+		width: 50%;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin: auto;	
+		max-width: 500px;	
+		min-width: 500px;
+	}	
+	
+	.userName {
+		color: #fff;
+		padding: 15px 0px;
+		text-align: center;
+	}
+
+	.userList__avatar--hover:hover{
+		transition: all .1ms;
+		border: 2px solid white;
+	}
+	
+
+	.userList__avatar1, .userList__avatar2, .userList__avatar3{
+		width: 186px;	
+		
+	}
+	
+	.userList__usr1 {
+		
+	}
+
+	.userList__usr2 {
+		
+	}
+
+	.userList__usr3 {
+		
+	}
+	
+	.addPerfil {
+	
+	}
+
+	.addPerfil__img{
+		width: 80px;
+		margin: 53px;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer__btnProfile {
+		font-size: 18px;
+		border: 1px solid #fff;
+		border-left: 3px solid #fff;
+		border-right: 3px solid #fff;
+		color: #fff;
+		margin-top: 50px;
+		padding: 15px 30px;
+		background-color: var(--background-color-standard);
+
+	}
+	.addPerfil__img:hover {
+		transition: all .4s;
+		transform: rotateZ(180deg);
+		
+	} 
+	
+
+	 @media (min-width: 1300px){
+		 .userList {
+			width: 100%;
+			max-width: 1300px;			
+		} 
+
+		.content__title {
+			font-size: 60px;
+			margin: 40px 0px;
+		}
+		
+		.headerTop figure{
+			/* DEIXAR SEM PARA O DESKTOP */
+			display: flex;
+			justify-content: flex-start;			
+		}
+
+		.headerTop__logo {
+			width: 18%;
+		}
+
+	}  
